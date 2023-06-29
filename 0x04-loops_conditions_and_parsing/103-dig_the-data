@@ -3,4 +3,4 @@
 # Group visitors by IP and HTTP status code 
 # Displays the number of occurences IP, and HTTP status
 file="apache-access.log"
-awk -F' ' '{ print $1, $9}' $file | sort | uniq -C|sort -nr
+awk -F' ' '{ print $1, $9}' $file | sort | uniq -c|sort -nr
