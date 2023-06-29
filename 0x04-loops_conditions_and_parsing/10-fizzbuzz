@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# Bash script that displays number from 1 to 100
+# Displays FizzBuzz if number is divisible by 3 and 5
+# Displays Fizz when the number is divisible by 3
+# Displays Buzz if the number is divisible by 5
+
+for num in {1..100}
+do
+	if (( num % 3 == 0 && num % 5 == 0))
+	then
+		echo "FizzBuzz"
+	elif (( num % 3 == 0))
+	then
+		echo "Fizz"
+	elif (( num % 5 == 0))
+	then
+		echo "Buzz"
+	else
+		echo "$num"
+	fi
+done
