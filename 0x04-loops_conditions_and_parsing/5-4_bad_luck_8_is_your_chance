@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# Bash script for looping 1 to 10 displaying "bad luch" on the 4th loop and
+# "good luck" on the 8th loop, the rest "Best School"
+
+string="Best School"
+bad="bad luck"
+good="good luck"
+num_times=10
+count=1
+
+while (($count <= num_times)); do
+	if (($count == 4)); then
+		echo "$bad"
+	elif (($count == 8)); then
+		echo "$good"
+	else
+		echo "$string"
+	fi
+	((count++))
+done
