@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# This bash script displays string "Best School" 10 times
+
+string="Best School"
+num_times=10
+counter=1
+until (($counter > num_times)); do
+echo $string
+((counter++))
+done

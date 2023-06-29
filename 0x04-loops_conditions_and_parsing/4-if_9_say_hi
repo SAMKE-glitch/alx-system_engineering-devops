@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Bash script that displays "Best School" 10 times but for the 9th iteration display "Hi"
+string="Best School"
+greetings="Hi"
+num_times=10
+count=1
+while (($count <= num_times)); do
+	if ((count == 9)); then
+		echo "$greetings"
+	else
+		echo "$string"
+	fi
+	((count++))
+done
+
