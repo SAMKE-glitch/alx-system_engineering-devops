@@ -1,4 +1,4 @@
-#!/usr/bin/enc bash
+#!/usr/bin/env bash
 # This bash script parses Apache log files in list format
 # Group visitors by IP and HTTP status code 
 # Displays the number of occurences IP, and HTTP status
