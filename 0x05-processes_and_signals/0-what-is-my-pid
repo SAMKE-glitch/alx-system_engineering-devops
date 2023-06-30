@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Bash script that displays it's own pid
 
-ps
+echo $$
