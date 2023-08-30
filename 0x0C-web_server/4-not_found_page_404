@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# Script that Configure your Nginx server to have a 
+# custom 404 page that contains the string Ceci n'est pas une page
+
+sudo apt-get update
+sudo apt-get install -y nginx
+
+sudo tee /var/www/html/index.html <<< 'Hello World!'
+string_for_replacement="server_name _;\n\trewrite ^\/redirect_me https:\/\/dochine.tech permanent;"
+sudo sed -i "s/server_name _;/$string_for_replacement/" /etc/nginx/sites-enabled/default
+
+# creates custom error page, then adds a 404 redirect
+sudo tee /var/www/html/404.html <<< "Ceci n'est pas une page"
+string_for_replacement="listen 80 default_server;\n\terror_page 404 \/404.html;\n\tlocation = \/404.html {\n\t\troot \/var\/www\/html;\n\t\tinternal;\n\t}"
+sudo sed -i "s/listen 80 default_server;/$string_for_replacement/" /etc/nginx/sites-enabled/default
+
+# restart the server
+sudo service nginx restart
