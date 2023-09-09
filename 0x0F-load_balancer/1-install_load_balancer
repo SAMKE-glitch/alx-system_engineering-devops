@@ -13,14 +13,14 @@ apt-get -y install haproxy
 # edit config file
 server_config=\
 "
-frontend samke-frontend
+frontend dochine-frontend
 	bind *:80
 	mode http
 	default_backend samke_backend
-backend samke-backend
+backend dochine-backend
 	balance roundrobin
-	server 252634-web-01 18.204.3.212:80 check
-	server 252634-web-02 54.236.27.172:80 check
+	server 252634-web-01 100.25.13.174:80 check
+	server 252634-web-02 204.236.223.235:80 check
 "
 echo "$server_config" | sudo tee -a /etc/haproxy/haproxy.cfg
 
