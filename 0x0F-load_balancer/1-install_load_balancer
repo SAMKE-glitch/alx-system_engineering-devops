@@ -16,7 +16,7 @@ server_config=\
 frontend dochine-frontend
 	bind *:80
 	mode http
-	default_backend samke_backend
+	default_backend dochine-backend
 backend dochine-backend
 	balance roundrobin
 	server 252634-web-01 100.25.13.174:80 check
