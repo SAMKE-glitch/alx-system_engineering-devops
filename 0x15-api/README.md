@@ -38,7 +38,7 @@ Pythonic Constant name style
 Significance of CapWords or CamelCase in Python
 
 
-0. Write a Python script that, using this REST API, for a given employee ID, returns information about his/her TODO list progress.
+0. Write a Python script that, using this REST API(https://jsonplaceholder.typicode.com/), for a given employee ID, returns information about his/her TODO list progress.
 
 Requirements:
 
